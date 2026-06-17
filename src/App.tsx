@@ -1,5 +1,6 @@
 import Header from './components/Header';
 import Footer from './components/Footer';
+import BackToTop from './components/BackToTop';
 import Hero from './sections/Hero';
 import About from './sections/About';
 import Courses from './sections/Courses';
@@ -28,6 +29,7 @@ function App() {
         <Contact />
       </main>
       <Footer />
+      <BackToTop />
     </div>
   );
 }
