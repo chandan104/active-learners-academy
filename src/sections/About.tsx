@@ -1,28 +1,35 @@
 import { Target, BookOpen, Award, HeartHandshake } from 'lucide-react';
 import { siteConfig } from '../content/site';
-import ImageWithFallback from '../components/ImageWithFallback';
 
 export default function About() {
   return (
     <section id="about" className="py-16 lg:py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-          {/* Image */}
+          {/* Instagram Reel Embed */}
           <div className="relative">
-            <div className="relative rounded-2xl overflow-hidden bg-navy-100 aspect-[4/3] shadow-xl">
-              <ImageWithFallback
-                src="/images/about/about-main.webp"
-                alt="About Active Learners Academy"
-                className="w-full h-full object-cover"
-                fallbackClassName="absolute inset-0 flex flex-col items-center justify-center p-8"
-                icon={<div className="w-16 h-16 rounded-full bg-navy-200 flex items-center justify-center mb-3"><BookOpen size={32} className="text-navy-600" /></div>}
-                fallbackText="About Image"
-                fallbackSubText="Replace at: public/images/about/about-main.webp"
+            <div className="relative rounded-2xl overflow-hidden bg-navy-100 shadow-xl flex justify-center">
+              <blockquote
+                className="instagram-media"
+                data-instgrm-captioned
+                data-instgrm-permalink="https://www.instagram.com/reel/C_TEyOFv2iD/?utm_source=ig_embed"
+                data-instgrm-version="14"
+                style={{
+                  background: '#FFF',
+                  border: '0',
+                  borderRadius: '3px',
+                  boxShadow: '0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15)',
+                  margin: '1px',
+                  maxWidth: '540px',
+                  minWidth: '326px',
+                  padding: '0',
+                  width: '100%',
+                }}
               />
             </div>
             
             {/* Established badge */}
-            <div className="absolute -bottom-4 -right-4 bg-navy-900 text-white rounded-xl px-5 py-3 shadow-lg">
+            <div className="absolute -bottom-4 -right-4 bg-navy-900 text-white rounded-xl px-5 py-3 shadow-lg z-10">
               <div className="font-heading text-2xl font-bold">Since</div>
               <div className="text-accent-400 font-bold text-lg">{siteConfig.established}</div>
             </div>
@@ -41,7 +48,7 @@ export default function About() {
               Active Learners Academy was established on <strong>16th July 2018</strong> with an aim to mentor and coach State Civil Service aspirants in their Civil Service preparation and other allied exams. Our journey began with a small classroom and a big dream.
             </p>
             <p className="text-navy-700 leading-relaxed mb-6">
-              Today, we have grown into a trusted institution that has shaped the futures of thousands of NPSC & NSSB aspirants. Our commitment to excellence, innovation, and student-centered learning remains unwavering.
+              Today, we have grown into a trusted institution that has shaped the futures of thousands of NPSC &amp; NSSB aspirants. Our commitment to excellence, innovation, and student-centered learning remains unwavering.
             </p>
 
             <div className="grid sm:grid-cols-2 gap-4 mb-8">
@@ -71,6 +78,8 @@ export default function About() {
           </div>
         </div>
       </div>
+      {/* Load Instagram embed script */}
+      <script async src="https://www.instagram.com/embed.js" />
     </section>
   );
 }

@@ -26,6 +26,10 @@ export default function Header() {
         scrolled ? 'bg-white/95 backdrop-blur-md shadow-md' : 'bg-white'
       }`}
     >
+      {/* SEO Tagline Bar */}
+      <div className="bg-navy-900 text-white text-center py-1.5 px-4 text-xs font-medium tracking-wide">
+        🎓 <span className="text-accent-300">Best Coaching Centre in Nagaland</span> for NPSC / NSSB / SSC – Located at Naharbari Junction, Dimapur
+      </div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}

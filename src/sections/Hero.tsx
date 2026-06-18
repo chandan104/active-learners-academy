@@ -1,59 +1,11 @@
-import { useState, useEffect } from 'react';
 import { MessageCircle, BookOpen } from 'lucide-react';
 import { siteConfig } from '../content/site';
-
-const heroSlides = [
-  { src: '/images/gallery/gallery-10.jpg', alt: 'GK Guide Book for NPSC & NSSB by Active Learners Academy' },
-  { src: '/images/gallery/gallery-11.jpg', alt: 'Active Learners Academy – Naharbari Junction, Dimapur' },
-  { src: '/images/gallery/gallery-09.jpg', alt: 'Live classroom projector session at Active Learners Academy' },
-  { src: '/images/gallery/gallery-06.jpg', alt: 'Active Learners Academy building, Dimapur' },
-];
-
-function HeroSlideshow() {
-  const [current, setCurrent] = useState(0);
-  const [fading, setFading] = useState(false);
-
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setFading(true);
-      setTimeout(() => {
-        setCurrent(prev => (prev + 1) % heroSlides.length);
-        setFading(false);
-      }, 400);
-    }, 3500);
-    return () => clearInterval(timer);
-  }, []);
-
-  return (
-    <div className="relative w-full max-w-md aspect-[4/5] rounded-2xl overflow-hidden bg-navy-800 shadow-2xl border border-white/10">
-      <img
-        src={heroSlides[current].src}
-        alt={heroSlides[current].alt}
-        className="w-full h-full object-cover transition-opacity duration-400"
-        style={{ opacity: fading ? 0 : 1, transition: 'opacity 0.4s ease' }}
-      />
-      {/* Gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-t from-navy-900/40 via-transparent to-transparent" />
-      {/* Dot indicators */}
-      <div className="absolute bottom-4 left-0 right-0 flex justify-center gap-2">
-        {heroSlides.map((_, i) => (
-          <button
-            key={i}
-            onClick={() => { setFading(true); setTimeout(() => { setCurrent(i); setFading(false); }, 400); }}
-            className={`w-2 h-2 rounded-full transition-all duration-300 ${i === current ? 'bg-white scale-125' : 'bg-white/40'}`}
-            aria-label={`Go to slide ${i + 1}`}
-          />
-        ))}
-      </div>
-    </div>
-  );
-}
 
 export default function Hero() {
   const whatsappUrl = `https://wa.me/91${siteConfig.whatsapp}?text=Hi%20Active%20Learners%20Academy,%20I%20would%20like%20to%20enquire%20about%20your%20courses.`;
 
   return (
-    <section id="hero" className="relative pt-20 lg:pt-24 min-h-[92vh] flex items-center">
+    <section id="hero" className="relative pt-24 lg:pt-28 min-h-[92vh] flex items-center">
       {/* Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-navy-900 via-navy-800 to-navy-900 z-0" />
       
@@ -85,7 +37,7 @@ export default function Hero() {
             </p>
 
             <p className="text-base lg:text-lg text-navy-300 leading-relaxed mb-8 max-w-xl mx-auto lg:mx-0">
-              Premier coaching institute for <span className="text-white font-medium">NPSC</span> & <span className="text-white font-medium">NSSB</span> aspirants in Dimapur. Expert faculty, result-oriented teaching, and affordable fees since 2018.
+              Premier coaching institute for <span className="text-white font-medium">NPSC</span> &amp; <span className="text-white font-medium">NSSB</span> aspirants in Dimapur. Expert faculty, result-oriented teaching, and affordable fees since 2018.
             </p>
 
             <div className="flex flex-col sm:flex-row items-center gap-4 justify-center lg:justify-start">
@@ -124,14 +76,24 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* Image Slideshow */}
+          {/* Static Hero Image */}
           <div className="hidden lg:flex justify-center">
             <div className="relative">
               {/* Decorative ring */}
               <div className="absolute -inset-4 rounded-3xl border-2 border-accent-500/20" />
               <div className="absolute -inset-8 rounded-3xl border border-white/5" />
               
-              <HeroSlideshow />
+              <div className="relative w-full max-w-md aspect-[4/5] rounded-2xl overflow-hidden bg-navy-800 shadow-2xl border border-white/10">
+                <img
+                  src="/images/hero/hero-main.jpg"
+                  alt="Apem Hongvah – Director, Active Learners Academy, NPSC NSSB Coaching Dimapur"
+                  className="w-full h-full object-cover"
+                  loading="eager"
+                  decoding="async"
+                />
+                {/* Gradient overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-navy-900/40 via-transparent to-transparent" />
+              </div>
 
               {/* Floating badge */}
               <div className="absolute -bottom-4 -left-4 bg-white rounded-xl px-4 py-3 shadow-lg border border-gray-100">

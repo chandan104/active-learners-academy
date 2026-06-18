@@ -1,7 +1,10 @@
-import { Clock, Calendar, BookOpen, CheckCircle } from 'lucide-react';
+import { Clock, Calendar, BookOpen, CheckCircle, MessageCircle } from 'lucide-react';
 import { courses } from '../content/courses';
+import { siteConfig } from '../content/site';
 
 export default function Courses() {
+  const whatsappUrl = `https://wa.me/91${siteConfig.whatsapp}?text=Hi%20Active%20Learners%20Academy,%20I%20would%20like%20to%20know%20about%20fees%20and%20admission.`;
+
   return (
     <section id="courses" className="py-16 lg:py-24 bg-navy-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -57,7 +60,7 @@ export default function Courses() {
                 </div>
               </div>
 
-              <div className="border-t border-gray-100 pt-5">
+              <div className="border-t border-gray-100 pt-5 mb-5">
                 <h4 className="font-semibold text-navy-900 text-sm mb-3">What you get:</h4>
                 <ul className="space-y-2">
                   {course.features.map((feature, i) => (
@@ -68,6 +71,16 @@ export default function Courses() {
                   ))}
                 </ul>
               </div>
+
+              <a
+                href={whatsappUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 w-full justify-center bg-accent-500 hover:bg-accent-600 text-white px-5 py-2.5 rounded-xl text-sm font-semibold transition-all"
+              >
+                <MessageCircle size={16} />
+                Enquire About Fees & Admission
+              </a>
             </div>
           ))}
         </div>

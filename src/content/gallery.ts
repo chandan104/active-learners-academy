@@ -6,10 +6,6 @@ export interface GalleryItem {
 }
 
 export const galleryItems: GalleryItem[] = [
-  { id: "gallery-01", title: "Classroom Session", category: "classroom", image: "/images/gallery/gallery-01.webp" },
-  { id: "gallery-02", title: "Student Activities", category: "events", image: "/images/gallery/gallery-02.webp" },
-  { id: "gallery-03", title: "Result Celebration", category: "results", image: "/images/gallery/gallery-03.webp" },
-  { id: "gallery-04", title: "Institute Building", category: "facilities", image: "/images/gallery/gallery-04.webp" },
   { id: "gallery-05", title: "ALA Signboard – Daytime", category: "facilities", image: "/images/gallery/gallery-05.jpg" },
   { id: "gallery-06", title: "Active Learners Academy – Street View", category: "facilities", image: "/images/gallery/gallery-06.jpg" },
   { id: "gallery-07", title: "ALA Signboard – Night", category: "facilities", image: "/images/gallery/gallery-07.jpg" },
@@ -17,6 +13,13 @@ export const galleryItems: GalleryItem[] = [
   { id: "gallery-09", title: "Classroom – Projector Session", category: "classroom", image: "/images/gallery/gallery-09.jpg" },
   { id: "gallery-10", title: "GK Guide Book – NPSC & NSSB", category: "results", image: "/images/gallery/gallery-10.jpg" },
   { id: "gallery-11", title: "Naharbari Junction – Our Location", category: "facilities", image: "/images/gallery/gallery-11.jpg" },
+  { id: "gallery-12", title: "Active Learners Academy – Location Sign", category: "facilities", image: "/images/gallery/gallery-12.jpg" },
+  { id: "gallery-13", title: "ALA Coaching Centre – Exterior", category: "facilities", image: "/images/gallery/gallery-13.jpg" },
+  { id: "gallery-14", title: "Classroom – Empty Hall", category: "classroom", image: "/images/gallery/gallery-14.jpg" },
+  { id: "gallery-15", title: "ALA Office & Faculty Room", category: "facilities", image: "/images/gallery/gallery-15.jpg" },
+  { id: "gallery-16", title: "Classroom – Projector & Whiteboard", category: "classroom", image: "/images/gallery/gallery-16.jpg" },
+  { id: "gallery-17", title: "GK Guide Book for NPSC & NSSB", category: "results", image: "/images/gallery/gallery-17.jpg" },
+  { id: "gallery-18", title: "Naharbari Village Junction", category: "facilities", image: "/images/gallery/gallery-18.jpg" },
 ];
 
 export const galleryCategories = [
