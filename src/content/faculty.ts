@@ -15,7 +15,7 @@ export const faculty: FacultyMember[] = [
     qualification: "BA (Hons) Political Science",
     experience: "10 Years",
     subjects: ["Polity", "Ethics", "International Relations", "History"],
-    photo: "/images/faculty/faculty-01.webp",
+    photo: "/images/faculty/faculty-01.jpg",
     achievements: ["Wrote UPSC Mains", "4 Years teaching in Delhi", "6 Years NPSC/NSSB experience"],
   },
   {
