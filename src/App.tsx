@@ -9,6 +9,7 @@ import Faculty from './sections/Faculty';
 import Results from './sections/Results';
 import Testimonials from './sections/Testimonials';
 import Gallery from './sections/Gallery';
+import InstagramFeed from './sections/InstagramFeed';
 import FAQ from './sections/FAQ';
 import Contact from './sections/Contact';
 
@@ -25,6 +26,7 @@ function App() {
         <Results />
         <Testimonials />
         <Gallery />
+        <InstagramFeed />
         <FAQ />
         <Contact />
       </main>

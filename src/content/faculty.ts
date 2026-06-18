@@ -10,8 +10,8 @@ export interface FacultyMember {
 
 export const faculty: FacultyMember[] = [
   {
-    id: "somipem",
-    name: "H. Somipem",
+    id: "apem",
+    name: "Apem Hongvah",
     qualification: "BA (Hons) Political Science",
     experience: "10 Years",
     subjects: ["Polity", "Ethics", "International Relations", "History"],

@@ -20,7 +20,7 @@ export const courses: Course[] = [
     totalClasses: "200 Days",
     classHours: "2-3 hours per day",
     weeklyLectures: "5 Lectures",
-    fees: "Rs. 37,000/-",
+    fees: "Rs. 30,000/-",
     description:
       "Comprehensive coaching for the NPSC Civil Services Examination covering Preliminary, Mains, and Interview stages with expert faculty guidance.",
     features: [
@@ -38,15 +38,15 @@ export const courses: Course[] = [
     name: "NSSB",
     fullName: "Nagaland Staff Selection Board",
     duration: "6 Months",
-    totalClasses: "98 Days",
+    totalClasses: "120 Days",
     classHours: "2-3 hours per day",
     weeklyLectures: "5 Lectures",
-    fees: "Rs. 23,000/-",
+    fees: "Rs. 18,000/-",
     description:
       "Focused coaching for NSSB examinations with structured syllabus navigation, regular tests, and result-oriented teaching methods.",
     features: [
       "Complete NSSB syllabus coverage",
-      "98 days of intensive classroom coaching",
+      "120 days of intensive classroom coaching",
       "Weekly 5 lectures with experienced faculty",
       "Regular mock tests & doubt clearing sessions",
       "Free study materials & test papers",

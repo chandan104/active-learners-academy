@@ -54,7 +54,15 @@ export const testimonials: Testimonial[] = [
   {
     id: "ninoka",
     name: "Ninoka Chishi",
+    achievement: "Secured LDA cum Computer Assistant through NSSB",
     quote:
       "I am very happy to be a part of this institute. The guidance provided by the teachers and the proprietor personally has helped me a lot to work on my weak areas and improve them. The efforts made by the teachers in providing a comfortable environment and clarity in teaching has made me learn many new things every day and with their help I am able to achieve my dreams.",
   },
+  {
+    id: "runogi",
+    name: "Runogi",
+    quote:
+      "Active Learners Academy does more than teach the syllabus. It redefined my entire learning approach. Through regular classes, comprehensive current affairs and daily quizzes, it helps me stay updated, consistent, disciplined and build concept clarity.",
+  },
 ];
+
