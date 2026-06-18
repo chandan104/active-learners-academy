@@ -32,12 +32,6 @@ export default function Courses() {
                     {course.fullName}
                   </h3>
                 </div>
-                <div className="text-right">
-                  <div className="font-heading text-2xl font-bold text-accent-600">
-                    {course.fees}
-                  </div>
-                  <div className="text-xs text-navy-500">total fee</div>
-                </div>
               </div>
 
               <p className="text-navy-600 text-sm leading-relaxed mb-5">

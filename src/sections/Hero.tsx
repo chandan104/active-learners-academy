@@ -1,6 +1,53 @@
-import { MessageCircle, BookOpen, Users } from 'lucide-react';
+import { useState, useEffect } from 'react';
+import { MessageCircle, BookOpen } from 'lucide-react';
 import { siteConfig } from '../content/site';
-import ImageWithFallback from '../components/ImageWithFallback';
+
+const heroSlides = [
+  { src: '/images/gallery/gallery-10.jpg', alt: 'GK Guide Book for NPSC & NSSB by Active Learners Academy' },
+  { src: '/images/gallery/gallery-11.jpg', alt: 'Active Learners Academy – Naharbari Junction, Dimapur' },
+  { src: '/images/gallery/gallery-09.jpg', alt: 'Live classroom projector session at Active Learners Academy' },
+  { src: '/images/gallery/gallery-06.jpg', alt: 'Active Learners Academy building, Dimapur' },
+];
+
+function HeroSlideshow() {
+  const [current, setCurrent] = useState(0);
+  const [fading, setFading] = useState(false);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setFading(true);
+      setTimeout(() => {
+        setCurrent(prev => (prev + 1) % heroSlides.length);
+        setFading(false);
+      }, 400);
+    }, 3500);
+    return () => clearInterval(timer);
+  }, []);
+
+  return (
+    <div className="relative w-full max-w-md aspect-[4/5] rounded-2xl overflow-hidden bg-navy-800 shadow-2xl border border-white/10">
+      <img
+        src={heroSlides[current].src}
+        alt={heroSlides[current].alt}
+        className="w-full h-full object-cover transition-opacity duration-400"
+        style={{ opacity: fading ? 0 : 1, transition: 'opacity 0.4s ease' }}
+      />
+      {/* Gradient overlay */}
+      <div className="absolute inset-0 bg-gradient-to-t from-navy-900/40 via-transparent to-transparent" />
+      {/* Dot indicators */}
+      <div className="absolute bottom-4 left-0 right-0 flex justify-center gap-2">
+        {heroSlides.map((_, i) => (
+          <button
+            key={i}
+            onClick={() => { setFading(true); setTimeout(() => { setCurrent(i); setFading(false); }, 400); }}
+            className={`w-2 h-2 rounded-full transition-all duration-300 ${i === current ? 'bg-white scale-125' : 'bg-white/40'}`}
+            aria-label={`Go to slide ${i + 1}`}
+          />
+        ))}
+      </div>
+    </div>
+  );
+}
 
 export default function Hero() {
   const whatsappUrl = `https://wa.me/91${siteConfig.whatsapp}?text=Hi%20Active%20Learners%20Academy,%20I%20would%20like%20to%20enquire%20about%20your%20courses.`;
@@ -77,25 +124,14 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* Image / Visual */}
+          {/* Image Slideshow */}
           <div className="hidden lg:flex justify-center">
             <div className="relative">
               {/* Decorative ring */}
               <div className="absolute -inset-4 rounded-3xl border-2 border-accent-500/20" />
               <div className="absolute -inset-8 rounded-3xl border border-white/5" />
               
-              {/* Main image container */}
-              <div className="relative w-full max-w-md aspect-[4/5] rounded-2xl overflow-hidden bg-navy-800 shadow-2xl border border-white/10">
-                <ImageWithFallback
-                  src="/images/hero/hero-main.webp"
-                  alt="Active Learners Academy Classroom"
-                  className="w-full h-full object-cover"
-                  fallbackClassName="absolute inset-0 flex flex-col items-center justify-center text-center p-8"
-                  fallbackText="Active Learners Academy"
-                  fallbackSubText="Replace with your hero photo"
-                  icon={<div className="w-20 h-20 rounded-full bg-accent-500/20 flex items-center justify-center mb-4"><Users size={40} className="text-accent-400" /></div>}
-                />
-              </div>
+              <HeroSlideshow />
 
               {/* Floating badge */}
               <div className="absolute -bottom-4 -left-4 bg-white rounded-xl px-4 py-3 shadow-lg border border-gray-100">
