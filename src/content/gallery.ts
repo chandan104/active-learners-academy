@@ -20,6 +20,8 @@ export const galleryItems: GalleryItem[] = [
   { id: "gallery-16", title: "Classroom – Projector & Whiteboard", category: "classroom", image: "/images/gallery/gallery-16.jpg" },
   { id: "gallery-17", title: "GK Guide Book for NPSC & NSSB", category: "results", image: "/images/gallery/gallery-17.jpg" },
   { id: "gallery-18", title: "Naharbari Village Junction", category: "facilities", image: "/images/gallery/gallery-18.jpg" },
+  { id: "gallery-19", title: "faculty with students", category: "facilities", image: "/images/gallery/gallery-19.jpg" },
+{ id: "gallery-20", title: "achievements", category: "facilities", image: "/images/gallery/gallery-20.jpg" },
 ];
 
 export const galleryCategories = [
