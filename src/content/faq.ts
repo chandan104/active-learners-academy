@@ -20,14 +20,6 @@ export const faqs: FAQItem[] = [
       "The course fee is all-inclusive. There are no separate charges for admission, prospectus, study materials, weekly tests, subject-wise tests, monthly mock tests, and other essential institute services. All these are provided free of cost to every student.",
   },
   {
-    question: "What is the fee for the NPSC course?",
-    answer: "The NPSC course fee is Rs. 37,000/- for the complete 10-month program covering 200 days of classes.",
-  },
-  {
-    question: "What is the fee for the NSSB course?",
-    answer: "The NSSB course fee is Rs. 23,000/- for the complete 6-month program covering 98 days of classes.",
-  },
-  {
     question: "Do you provide study materials?",
     answer:
       "Yes, comprehensive exam-oriented study materials are provided free of cost to all students. We also provide monthly current affairs (ALA Monthly Current Affairs) to keep students updated.",
