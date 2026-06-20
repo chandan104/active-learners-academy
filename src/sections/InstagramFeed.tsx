@@ -6,6 +6,7 @@ const posts = [
   { id: 'Ct3hyx1vItK', type: 'post' },
   { id: 'C9rY6HoP2oh', type: 'post' },
   { id: 'C_TEyOFv2iD', type: 'reel' },
+  { id: 'Co_p7bZPyP-', type: 'post' }, //new post
 ];
 
 function InstagramEmbed({ postId }: { postId: string }) {

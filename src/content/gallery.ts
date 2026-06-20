@@ -15,6 +15,8 @@ export const galleryItems: GalleryItem[] = [
   { id: "gallery-09", title: "Classroom – Projector Session", category: "classroom", image: "/images/gallery/gallery-09.jpg" },
   { id: "gallery-10", title: "GK Guide Book – NPSC & NSSB", category: "results", image: "/images/gallery/gallery-10.jpg" },
   { id: "gallery-11", title: "Naharbari Junction – Our Location", category: "facilities", image: "/images/gallery/gallery-11.jpg" },
+  { id: "gallery-12", title: "Students Group Activity", category: "events", image: "/images/gallery/gallery-12.jpg" },
+  { id: "gallery-13", title: "Faculty Team", category: "facilities", image: "/images/gallery/gallery-13.jpg" },
 ];
 
 export const galleryCategories = [
