@@ -8,7 +8,7 @@ export interface GalleryItem {
 export const galleryItems: GalleryItem[] = [
   { id: "gallery-05", title: "ALA Signboard – Daytime", category: "facilities", image: "/images/gallery/gallery-05.jpg" },
   { id: "gallery-12", title: "Students Group Activity", category: "events", image: "/images/gallery/gallery-12.jpg" },
-  { id: "gallery-13", title: "Faculty Team", category: "facilities", image: "/images/gallery/gallery-13.jpg" },
+  { id: "gallery-13", title: "Our Successful NPSC candidates for the year 2021 - 2022", category: "facilities", image: "/images/gallery/gallery-13.jpg" },
   { id: "gallery-06", title: "Active Learners Academy – Street View", category: "facilities", image: "/images/gallery/gallery-06.jpg" },
   { id: "gallery-07", title: "ALA Signboard – Night", category: "facilities", image: "/images/gallery/gallery-07.jpg" },
   { id: "gallery-19", title: "faculty with students", category: "facilities", image: "/images/gallery/gallery-19.jpg" },
